@@ -38,7 +38,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0"
-volttron = ">=11.0.0rc1" # {path="/home/dmr/Projects/volttron-modular/core/volttron-core", develop=true}  # ">=10.0.5rc0,<11.0"
+volttron-core = ">=2.0.0rc30"   # the modular platform; classic VOLTTRON 10/11 is supported through the import fallbacks
 julia = ">=0.6.2"
 
 
