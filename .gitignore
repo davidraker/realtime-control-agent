@@ -3,3 +3,7 @@
 __pycache__/
 *.pyc
 dist
+.vscode/
+build/
+*.egg-info/
+*.log
