@@ -1,6 +1,6 @@
 {
-  "ctrl_eval_engine_app_path": "/home/dmr/Projects/der_control_modules/ctrl-eval-engine/app",
-  "julia_path": "/home/dmr/.juliaup/bin/julia",
+  "ctrl_eval_engine_app_path": "/path/to/ctrl-eval-engine/app",
+  "julia_path": "julia",
   "mode_package": "engine",
   "ess": {
     "class_name": "FakeESS",
