@@ -171,7 +171,7 @@ class RTControlAgent(Agent):
 
     # ------------------------------------------------------------------ hub format (61850-shaped) in and out
     def ingest_hub(self, peer, sender, bus, topic, headers, message):
-        """A message in the `rtc_controller` format (the hub's logical nodes) published by a Device Adapter bus end:
+        """A message in the `rtc_controller` format (the hub's logical nodes) published by a Resource Bridge bus end:
         apply every data object a mode's point map knows to that mode."""
         if (headers or {}).get(HEADER_ORIGIN) == self.core.identity:
             return
@@ -211,7 +211,7 @@ class RTControlAgent(Agent):
     def apply_hub_values(self, values: dict, source: str = None) -> dict:
         """Apply a dict keyed by 61850 logical node (`{"DWMX": {"LimW": 50, "ModEna": true}, ...}`) to the modes.
         `FSCH.SchdEntr` entries in effect now are applied like immediate values (later starts win). With a `source`
-        (the topic a Device Adapter bus end publishes on), only values that differ from what that source last asserted
+        (the topic a Resource Bridge bus end publishes on), only values that differ from what that source last asserted
         are applied: devices republish their whole state every poll, and a stale limit from one controller must not
         undo a newer one from another. Returns the points applied as `{"LN.DO": value}`."""
         now = get_aware_utc_now()

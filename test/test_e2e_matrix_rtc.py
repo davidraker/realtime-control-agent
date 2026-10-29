@@ -1,7 +1,7 @@
 """
 The RTC agent as the fifth party of the interoperability e2e matrix (MESA plan Phase 7, in-process half).
 
-Runs the interoperability service's matrix harness with ``E2E_RTC=1`` in the Device Adapter bus mode: the four
+Runs the interoperability service's matrix harness with ``E2E_RTC=1`` in the Resource Bridge bus mode: the four
 protocols' enabled 50 % active power limit reaches the agent's Active Power Limit mode through the `rtc_controller`
 format, and the agent's status (its power) reaches each protocol's device and the OpenFMB broker. Needs an environment
 with the interoperability service, the driver stack, PyJulia and ``rt_control`` installed, Julia, and the engine project.
